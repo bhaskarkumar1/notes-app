@@ -42,6 +42,15 @@ if(notes.title!=0 && notes.text!=0){
 }
 
   }
+
+
+// delete
+let handleDelete=(e)=>{
+  // console.log("handle delte clicked")
+  console.log(e)
+}
+
+
 return(
 <>
 <div className="container">
@@ -57,7 +66,7 @@ handleChange={handleChange}
 <div className="notesbox">
   {
     data.map((note,index)=>(
-         <Notes key={index} title={note.title} text={note.text} color={note.color}
+         <Notes key={index} title={note.title} text={note.text} color={note.color} handleDelete={handleDelete}
          />
 
     ))

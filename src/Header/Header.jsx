@@ -5,7 +5,7 @@ const Header=()=>{
     return (
         <div className={styles.container} >
 <GoLightBulb  className={styles.icon}/>
-<h1>ToDoList</h1>
+<h1>Notes App</h1>
 
         </div>
     )

@@ -1,7 +1,9 @@
 import style from "./Notes.module.css"
 import { RiDeleteBinLine } from "react-icons/ri";
 
-const Notes=({key,title,text,color})=>{
+const Notes=({key,title,text,color,handleDelete})=>{
+    
+
     return(
         <>
         <div key={key} className={style.container} style={{backgroundColor:color}}>
@@ -12,7 +14,7 @@ const Notes=({key,title,text,color})=>{
                 <p>{text}</p>
             </div>
 
-            <RiDeleteBinLine className={style.icon} />
+            <RiDeleteBinLine  onClick={(e)=>handleDelete(key)} className={style.icon} />
 
         </div>
         </>
