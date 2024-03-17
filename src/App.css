@@ -1,0 +1,15 @@
+.container{
+    min-height: 50vh;
+    height: auto;
+    /* background-color: rgb(185, 108, 8); */
+}
+
+.notesbox{
+    width: 100%;
+    min-height: 50vh;
+    height: auto;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
