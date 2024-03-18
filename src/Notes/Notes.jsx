@@ -1,7 +1,8 @@
 import style from "./Notes.module.css"
 import { RiDeleteBinLine } from "react-icons/ri";
+import { FaEdit } from "react-icons/fa";
 
-const Notes=({notesKey,title,text,color,handleDelete})=>{
+const Notes=({notesKey,title,text,color,handleDelete,handleEdit})=>{
     // delete
 
 
@@ -14,6 +15,8 @@ const Notes=({notesKey,title,text,color,handleDelete})=>{
             <div className={style.text}>
                 <p>{text}</p>
             </div>
+            <FaEdit onClick={()=> handleEdit(title,text,color)} className={style.edit} />
+
             <RiDeleteBinLine onClick={()=>handleDelete(title,text)}   className={style.icon} />
             
         </div>

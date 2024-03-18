@@ -31,6 +31,15 @@
     /* border-radius: 50px solid red; */
     color: black;
 }
+.edit{
+    font-size: 30px;
+    position: relative;
+    left:85% ;
+    top: -40%;
+    /* background-color: #FBBC05; */
+    /* border-radius: 50px solid red; */
+    color:#fff;
+}
 
 @media screen and (max-width:676px){
 .container{

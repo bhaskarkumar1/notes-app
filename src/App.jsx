@@ -55,7 +55,16 @@ return obj.title!==title && obj.text!==text
 setData(filterdArray)
 }
 
-
+// 
+let handleEdit=(title,text,color)=>{
+  setNotes(()=>({
+    text:text,
+    title:title,
+    color:color
+  }))
+// console.log("edit btn")
+handleDelete(title,text)
+}
 
 return(
 <>
@@ -72,7 +81,7 @@ handleChange={handleChange}
 <div className="notesbox">
   {
     data.map((note,index)=>(
-         <Notes notesKey={index} title={note.title} text={note.text} color={note.color}  handleDelete={handleDelete}
+         <Notes notesKey={index} title={note.title} text={note.text} color={note.color}  handleDelete={handleDelete} handleEdit={handleEdit}
          />
 
     ))
