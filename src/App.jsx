@@ -29,7 +29,7 @@ let handleColor=(e)=>{
 
 
 let handleSubmit=()=>{
-  console.log(notes)
+  // console.log(notes)
 if(notes.title!=0 && notes.text!=0){
   setData((prevData)=>([
       ...prevData,notes
@@ -37,18 +37,24 @@ if(notes.title!=0 && notes.text!=0){
   console.log(data)
   setNotes(()=>({
   title:"",
-  text:""
+  text:"",
+  color:"green"
   }))
 }
 
   }
 
+  let handleDelete=(title,text)=>{
+    // console.log("handle delte clicked")
+    // console.log(title,text)
 
-// delete
-let handleDelete=(e)=>{
-  // console.log("handle delte clicked")
-  console.log(e)
+    // console.log(data)
+const filterdArray= data.filter((obj)=>{
+return obj.title!==title && obj.text!==text
+})
+setData(filterdArray)
 }
+
 
 
 return(
@@ -66,7 +72,7 @@ handleChange={handleChange}
 <div className="notesbox">
   {
     data.map((note,index)=>(
-         <Notes key={index} title={note.title} text={note.text} color={note.color} handleDelete={handleDelete}
+         <Notes notesKey={index} title={note.title} text={note.text} color={note.color}  handleDelete={handleDelete}
          />
 
     ))
